@@ -10,12 +10,17 @@ const DashBoard = () => {
   return (
     <div>
       <div className="d-flex justify-content-between p-1 bg-success text-white align-items-center">
-        <div>
+        <div className='d'>
           <div className="d-flex g-1">
             <Image src={logo} width={90} className="ms-5" />
             <div className="fs-5 d-flex align-items-center ms-3 ">
               Al-Hudah Model College
             </div>
+          <div className='d-flex align-items-center ms-5 justify-content-between'>
+            <Link href={"/"} className='btn text-white'>Payment</Link>
+            <Link href={"/"} className='btn text-white'>Result</Link>
+            <Link href={"/"} className='btn text-white'>Academics</Link>
+          </div>
           </div>
         </div>
         <div className="d-flex justify-content-around ">
@@ -37,21 +42,22 @@ const DashBoard = () => {
             </div>
           </div>
         </div>
-        <div className={`${style.shadow} border rounded-1 mx-auto col-10 my-1`}>
+        <div className={`${style.shadow}  rounded-1 mx-auto col-10 my-1`}>
           <div className="p-3">
             <h3 className="text-center border-bottom">Students List</h3>
           </div>
           <div className="d-flex justify-content-between p-4">
             <div className="fs-5">No of Students: 3</div>
             <div>
-              <button
+              <Link
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
                 className="btn btn-primary"
+                href={"/AddStudent"}
               >
                 Add New Student
-              </button>
+              </Link>
             </div>
           </div>
 
